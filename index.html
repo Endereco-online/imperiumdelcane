@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imperium Del Cane | Cane Corso Italiano — Ceará</title>
+<meta name="description" content="Criação ética de Cane Corso Italiano com registro CBKC/FCI. Genética importada, temperamento equilibrado, filhotes disponíveis mediante consulta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d0c09;
+    --bg-alt:#161309;
+    --bg-panel:#1c1810;
+    --gold:#c9a355;
+    --gold-light:#e6cd93;
+    --gold-dim:#7a6539;
+    --cream:#f3ecdb;
+    --muted:#a89d84;
+    --line:rgba(201,163,85,0.22);
+    --serif:'Bodoni Moda', serif;
+    --sans:'Inter', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+  h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:500;
+    letter-spacing:0.01em;
+    color:var(--cream);
+  }
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.9s ease, transform 0.9s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(13,12,9,0.72);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color 0.4s ease, background 0.4s ease;
+  }
+  header.scrolled{
+    border-bottom-color:var(--line);
+    background:rgba(13,12,9,0.92);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 32px;max-width:1180px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand img{height:38px;width:auto;}
+  .brand-name{font-family:var(--serif);font-size:19px;letter-spacing:0.04em;color:var(--gold-light);}
+  .brand-name span{display:block;font-family:var(--sans);font-size:9px;letter-spacing:0.22em;color:var(--muted);margin-top:2px;}
+  nav.links{display:flex;gap:34px;align-items:center;}
+  nav.links a{
+    font-size:13.5px;color:var(--cream);opacity:0.82;
+    position:relative;padding-bottom:4px;transition:opacity 0.25s;
+  }
+  nav.links a:hover{opacity:1;}
+  nav.links a::after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:1px;
+    background:var(--gold);transition:width 0.3s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    border:1px solid var(--gold-dim);color:var(--gold-light);
+    padding:9px 18px;font-size:13px;border-radius:2px;
+    transition:background 0.3s ease, border-color 0.3s ease;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--gold);color:#1a1509;border-color:var(--gold);}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+  .burger span{width:22px;height:1px;background:var(--gold-light);}
+
+  @media (max-width:880px){
+    nav.links{
+      position:fixed;top:74px;left:0;right:0;background:var(--bg-alt);
+      flex-direction:column;align-items:flex-start;gap:0;
+      max-height:0;overflow:hidden;transition:max-height 0.4s ease;
+      border-bottom:1px solid var(--line);
+    }
+    nav.links.open{max-height:400px;}
+    nav.links a{width:100%;padding:16px 32px;border-bottom:1px solid var(--line);}
+    nav.links a::after{display:none;}
+    .nav-cta{margin:16px 32px;}
+    .burger{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:100svh;display:flex;align-items:flex-end;
+    background:
+      linear-gradient(180deg, rgba(10,9,6,0.35) 0%, rgba(10,9,6,0.15) 30%, rgba(9,8,5,0.85) 88%, var(--bg) 100%),
+      url('https://endereco-online.github.io/imperiumdelcane/ETNA.png') center 22% / cover no-repeat;
+  }
+  .hero-inner{
+    width:100%;padding:0 32px 88px;max-width:1180px;margin:0 auto;
+    display:flex;flex-direction:column;gap:26px;
+  }
+  .hero-tag{
+    font-size:13px;letter-spacing:0.08em;color:var(--gold-light);
+    display:flex;align-items:center;gap:12px;
+  }
+  .hero-tag::before{content:'';width:34px;height:1px;background:var(--gold);}
+  .hero h1{
+    font-size:clamp(34px,5.4vw,66px);line-height:1.06;max-width:15ch;
+    font-style:italic;font-weight:400;
+  }
+  .hero p.sub{
+    max-width:44ch;font-size:17px;color:var(--muted);font-weight:300;
+  }
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 28px;font-size:14.5px;border-radius:2px;
+    transition:transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--gold);color:#1a1509;font-weight:500;}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--gold-light);}
+  .btn-ghost{border:1px solid var(--gold-dim);color:var(--cream);}
+  .btn-ghost:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .btn svg{width:17px;height:17px;flex-shrink:0;}
+
+  .hero-proof{
+    margin-top:10px;display:flex;align-items:center;gap:12px;
+    font-size:13px;color:var(--muted);
+  }
+  .hero-proof strong{color:var(--gold-light);font-weight:500;}
+
+  /* ---------- SECTION shared ---------- */
+  section{padding:120px 0;position:relative;}
+  .eyebrow{
+    font-family:var(--serif);font-style:italic;color:var(--gold-light);
+    font-size:15px;margin-bottom:14px;
+  }
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,42px);line-height:1.15;}
+  .rule{width:56px;height:1px;background:var(--gold-dim);margin:22px 0;}
+
+  /* ---------- WHY CANE CORSO ---------- */
+  .why{background:var(--bg);}
+  .why-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:start;}
+  .why-copy p{color:var(--muted);font-size:16px;max-width:46ch;margin-bottom:20px;}
+  .traits{display:flex;flex-direction:column;gap:0;margin-top:28px;}
+  .trait{
+    display:grid;grid-template-columns:130px 1fr;gap:24px;
+    padding:26px 0;border-top:1px solid var(--line);align-items:center;
+  }
+  .trait:last-child{border-bottom:1px solid var(--line);}
+  .trait img{width:130px;height:100px;object-fit:cover;border-radius:2px;filter:grayscale(0.15);}
+  .trait h3{font-size:19px;font-weight:500;font-style:italic;margin-bottom:6px;color:var(--gold-light);}
+  .trait p{font-size:14.5px;color:var(--muted);}
+
+  /* ---------- AUTHORITY ---------- */
+  .authority{
+    background:var(--bg-alt);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .auth-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:70px;align-items:center;}
+  .auth-grid img{width:100%;height:460px;object-fit:cover;border-radius:2px;}
+  .auth-copy p{color:var(--muted);font-size:16px;margin-bottom:18px;max-width:48ch;}
+  .stat-row{display:flex;gap:40px;margin-top:36px;flex-wrap:wrap;}
+  .stat b{
+    display:block;font-family:var(--serif);font-style:italic;font-size:30px;
+    color:var(--gold-light);font-weight:500;
+  }
+  .stat span{font-size:12.5px;color:var(--muted);}
+  .badges{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;}
+  .badge{
+    border:1px solid var(--gold-dim);padding:8px 16px;font-size:12.5px;
+    letter-spacing:0.04em;color:var(--gold-light);border-radius:2px;
+  }
+
+  /* ---------- GALLERY: NOSSOS CÃES ---------- */
+  .dogs{background:var(--bg);}
+  .dogs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .dog-card{position:relative;overflow:hidden;border-radius:2px;aspect-ratio:3/4;}
+  .dog-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+  .dog-card:hover img{transform:scale(1.06);}
+  .dog-card .tag{
+    position:absolute;left:0;right:0;bottom:0;padding:20px 18px;
+    background:linear-gradient(180deg, transparent, rgba(6,5,3,0.92) 78%);
+  }
+  .dog-card .tag h3{font-size:20px;font-style:italic;font-weight:500;color:var(--gold-light);}
+  .dog-card .tag span{font-size:11.5px;color:var(--muted);letter-spacing:0.04em;}
+
+  @media (max-width:880px){
+    .dogs-grid{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- LITTERS ---------- */
+  .litters{
+    background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    position:relative;
+  }
+  .litters-inner{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;
+    border:1px solid var(--line);border-radius:2px;overflow:hidden;
+  }
+  .litters-img{height:100%;min-height:420px;overflow:hidden;}
+  .litters-img img{width:100%;height:100%;object-fit:cover;}
+  .litters-copy{
+    padding:56px 52px;display:flex;flex-direction:column;justify-content:center;
+    background:var(--bg-panel);
+  }
+  .litters-copy h2{font-size:clamp(26px,3vw,36px);margin-bottom:18px;font-style:italic;}
+  .litters-copy p{color:var(--muted);font-size:15.5px;margin-bottom:30px;max-width:40ch;}
+
+  @media (max-width:880px){
+    .litters-inner{grid-template-columns:1fr;}
+    .litters-img{min-height:280px;}
+    .litters-copy{padding:44px 32px;}
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--bg);}
+  .faq-list{max-width:760px;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;color:var(--cream);
+    padding:26px 4px;display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--sans);font-size:16.5px;cursor:pointer;gap:20px;
+  }
+  .faq-q .plus{
+    font-family:var(--serif);font-size:22px;color:var(--gold);flex-shrink:0;
+    transition:transform 0.3s ease;
+  }
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
+  .faq-a p{color:var(--muted);font-size:15px;padding:0 4px 26px;max-width:60ch;}
+
+  /* ---------- FOOTER / CONTACT ---------- */
+  footer{
+    position:relative;padding:120px 0 48px;
+    background:
+      linear-gradient(180deg, var(--bg) 0%, rgba(9,8,5,0.86) 40%, rgba(9,8,5,0.94) 100%),
+      url('https://endereco-online.github.io/imperiumdelcane/foto_canil.jpg') center / cover no-repeat;
+    border-top:1px solid var(--line);
+  }
+  .footer-cta{text-align:center;max-width:600px;margin:0 auto 90px;}
+  .footer-cta h2{font-size:clamp(28px,4vw,44px);font-style:italic;margin-bottom:20px;}
+  .footer-cta p{color:var(--muted);font-size:16px;margin-bottom:34px;}
+  .footer-grid{
+    display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px;
+    padding-top:56px;border-top:1px solid var(--line);
+  }
+  .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+  .footer-brand img{height:36px;}
+  .footer-brand span{font-family:var(--serif);font-size:18px;color:var(--gold-light);}
+  .footer p.desc{font-size:13.5px;color:var(--muted);max-width:32ch;}
+  .footer h4{font-size:12.5px;letter-spacing:0.06em;color:var(--gold-light);margin-bottom:16px;font-weight:500;}
+  .footer ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+  .footer ul a{font-size:14px;color:var(--muted);transition:color 0.25s;}
+  .footer ul a:hover{color:var(--gold-light);}
+  .footer-bottom{
+    margin-top:70px;padding-top:26px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    font-size:12px;color:var(--muted);
+  }
+
+  @media (max-width:880px){
+    .footer-grid{grid-template-columns:1fr;gap:36px;}
+  }
+
+  /* ---------- STICKY WHATSAPP ---------- */
+  .wa-float{
+    position:fixed;right:26px;bottom:26px;z-index:200;
+    width:58px;height:58px;border-radius:50%;
+    background:#25D366;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,0.4);
+    opacity:0;transform:translateY(16px) scale(0.9);pointer-events:none;
+    transition:opacity 0.35s ease, transform 0.35s ease;
+  }
+  .wa-float.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+  .wa-float svg{width:28px;height:28px;}
+
+  /* responsive tweaks */
+  @media (max-width:880px){
+    .why-grid, .auth-grid{grid-template-columns:1fr;gap:44px;}
+    .auth-grid img{height:320px;order:-1;}
+    section{padding:80px 0;}
+    .wrap{padding:0 22px;}
+    .nav{padding:16px 22px;}
+    .hero-inner{padding:0 22px 64px;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img src="https://endereco-online.github.io/imperiumdelcane/logo.jpeg" alt="Imperium Del Cane">
+      <span class="brand-name">Imperium Del Cane<span>CANE CORSO ITALIANO</span></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#raca">A raça</a>
+      <a href="#canil">Nosso canil</a>
+      <a href="#caes">Nossos cães</a>
+      <a href="#ninhadas">Ninhadas</a>
+      <a href="#faq">Perguntas</a>
+      <a class="nav-cta" href="https://wa.me/5585999054747?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20disponibilidade%20dos%20filhotes." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-tag reveal in">Cascavel · Fortaleza, Ceará</p>
+    <h1 class="reveal in">O guardião que a sua família estava esperando.</h1>
+    <p class="sub reveal in">Filhotes de Cane Corso Italiano com pedigree CBKC/FCI e genética importada da Itália, criados em ambiente familiar com acompanhamento veterinário contínuo.</p>
+    <div class="hero-ctas reveal in">
+      <a class="btn btn-primary" href="https://wa.me/5585999054747?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20disponibilidade%20dos%20filhotes." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10.2 9 9.7 7.6 9.5 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.6 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C3.7 14.9 3.3 13.5 3.3 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7z"/></svg>
+        Falar com o criador
+      </a>
+      <a class="btn btn-ghost" href="#ninhadas">Ver ninhadas disponíveis</a>
+    </div>
+    <p class="hero-proof reveal in">Acompanhado por <strong>+20 mil pessoas</strong> no Instagram · <a href="https://www.instagram.com/imperiumdelcane/" target="_blank" rel="noopener" style="color:var(--gold-light);text-decoration:underline;">@imperiumdelcane</a></p>
+  </div>
+</section>
+
+<section class="why" id="raca">
+  <div class="wrap why-grid">
+    <div class="why-copy reveal">
+      <p class="eyebrow">A raça</p>
+      <h2>Por que tantas famílias escolhem o Cane Corso</h2>
+      <div class="rule"></div>
+      <p>Admirado por sua presença imponente, o Cane Corso reúne o que poucas raças conseguem equilibrar: instinto de proteção natural e um temperamento dócil dentro de casa. É um cão que impõe respeito na rua e se deita aos pés das crianças em casa.</p>
+      <p>Com socialização e adestramento adequados desde filhote, ele se torna um companheiro leal, atento e surpreendentemente fácil de conduzir — mesmo sendo um animal de guarda por natureza.</p>
+    </div>
+    <div class="traits reveal">
+      <div class="trait">
+        <img src="https://endereco-online.github.io/imperiumdelcane/em%20treino.jpg" alt="Cane Corso em treinamento">
+        <div>
+          <h3>Protetor por instinto</h3>
+          <p>Vigilante e territorial, atento à segurança da família sem precisar de estímulo.</p>
+        </div>
+      </div>
+      <div class="trait">
+        <img src="https://endereco-online.github.io/imperiumdelcane/cane%20e%20crian%C3%A7a%20sentados.jpg" alt="Criança sentada ao lado do Cane Corso">
+        <div>
+          <h3>Equilíbrio com a família</h3>
+          <p>Dócil e paciente com crianças quando criado em ambiente estruturado e afetuoso.</p>
+        </div>
+      </div>
+      <div class="trait">
+        <img src="https://endereco-online.github.io/imperiumdelcane/crian%C3%A7a%20brincando.jpg" alt="Criança brincando com o Cane Corso">
+        <div>
+          <h3>Inteligência e disposição</h3>
+          <p>Aprende com rapidez e responde bem ao adestramento desde cedo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="authority" id="canil">
+  <div class="wrap auth-grid">
+    <img class="reveal" src="https://endereco-online.github.io/imperiumdelcane/foto_canil.jpg" alt="Estrutura do canil Imperium Del Cane">
+    <div class="auth-copy reveal">
+      <p class="eyebrow">Nosso canil</p>
+      <h2>Genética italiana, criação ética.</h2>
+      <div class="rule"></div>
+      <p>Somos um canil especializado exclusivamente na raça Cane Corso Italiano, com matrizes e reprodutores de linhagem importada, registro CBKC/FCI e acompanhamento veterinário contínuo em cada etapa da criação.</p>
+      <p>Nossos cães vivem em estrutura própria, com alimentação premium e rotina de socialização — e recebemos famílias interessadas para conhecer o espaço antes da retirada do filhote.</p>
+      <div class="stat-row">
+        <div class="stat"><b>CBKC/FCI</b><span>Registro oficial</span></div>
+        <div class="stat"><b>+20 mil</b><span>Seguidores no Instagram</span></div>
+        <div class="stat"><b>Ceará</b><span>Cascavel · Fortaleza</span></div>
+      </div>
+      <div class="badges">
+        <span class="badge">Genética importada da Itália</span>
+        <span class="badge">Criação ética</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dogs" id="caes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Nossos cães</p>
+      <h2>Matrizes e reprodutores da nossa linhagem</h2>
+    </div>
+    <div class="dogs-grid reveal">
+      <div class="dog-card">
+        <img src="https://endereco-online.github.io/imperiumdelcane/ETNA.png" alt="Etna, Cane Corso do canil Imperium Del Cane">
+        <div class="tag"><h3>Etna</h3><span>Linhagem italiana</span></div>
+      </div>
+      <div class="dog-card">
+        <img src="https://endereco-online.github.io/imperiumdelcane/JADE.png" alt="Jade, Cane Corso do canil Imperium Del Cane">
+        <div class="tag"><h3>Jade</h3><span>Linhagem italiana</span></div>
+      </div>
+      <div class="dog-card">
+        <img src="https://endereco-online.github.io/imperiumdelcane/OLAVO.png" alt="Olavo, Cane Corso do canil Imperium Del Cane">
+        <div class="tag"><h3>Olavo</h3><span>Linhagem italiana</span></div>
+      </div>
+      <div class="dog-card">
+        <img src="https://endereco-online.github.io/imperiumdelcane/ZANNA.png" alt="Zanna, Cane Corso do canil Imperium Del Cane">
+        <div class="tag"><h3>Zanna</h3><span>Linhagem italiana</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="litters" id="ninhadas">
+  <div class="wrap">
+    <div class="litters-inner reveal">
+      <div class="litters-img">
+        <img src="https://endereco-online.github.io/imperiumdelcane/filhotes.jpg" alt="Filhotes de Cane Corso disponíveis">
+      </div>
+      <div class="litters-copy">
+        <p class="eyebrow">Ninhadas</p>
+        <h2>Filhotes com data de nascimento e disponibilidade variáveis.</h2>
+        <p>Por sermos um canil de baixa escala, cada ninhada é acompanhada de perto e reservada com antecedência. Fale conosco pelo WhatsApp para saber sobre a próxima disponível — valores e condições são tratados diretamente na conversa.</p>
+        <a class="btn btn-primary" style="align-self:flex-start;" href="https://wa.me/5585999054747?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20disponibilidade%20dos%20filhotes." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10.2 9 9.7 7.6 9.5 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.6 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C3.7 14.9 3.3 13.5 3.3 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7z"/></svg>
+          Entrar na lista de espera
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2>Antes de decidir, tire suas dúvidas</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">O Cane Corso se dá bem com crianças?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Sim. Quando socializado desde filhote, é um cão paciente e protetor com as crianças da casa — inclusive um dos traços mais buscados por famílias.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Preciso de muito espaço para criar um?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Um quintal ajuda, mas não é obrigatório. O essencial é rotina de passeios e atividade física — é uma raça que se adapta bem quando bem exercitada.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como funciona a entrega ou retirada do filhote?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Recebemos famílias no canil para conhecer o espaço e os pais do filhote antes da retirada. Detalhes de logística são combinados diretamente pelo WhatsApp.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Os filhotes têm pedigree?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Sim, todos com registro CBKC/FCI e documentação de linhagem, entregue junto com o filhote.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como sei se tem ninhada disponível agora?<span class="plus">+</span></button>
+        <div class="faq-a"><p>A disponibilidade muda com frequência. A forma mais rápida de confirmar é chamando no WhatsApp — respondemos com a situação atual da ninhada.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="footer-cta reveal">
+      <h2>Ainda em dúvida se o Cane Corso é o cão certo para você?</h2>
+      <p>Fale com a gente sem compromisso. Contamos com prazer sobre a raça, o canil e a próxima ninhada.</p>
+      <a class="btn btn-primary" href="https://wa.me/5585999054747?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20disponibilidade%20dos%20filhotes." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10.2 9 9.7 7.6 9.5 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.6 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C3.7 14.9 3.3 13.5 3.3 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7z"/></svg>
+        Falar no WhatsApp agora
+      </a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer">
+        <div class="footer-brand">
+          <img src="https://endereco-online.github.io/imperiumdelcane/logo.jpeg" alt="Imperium Del Cane">
+          <span>Imperium Del Cane</span>
+        </div>
+        <p class="desc">Criação especializada de Cane Corso Italiano, com registro CBKC/FCI, em Cascavel — Fortaleza, Ceará.</p>
+      </div>
+      <div class="footer">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#raca">A raça</a></li>
+          <li><a href="#canil">Nosso canil</a></li>
+          <li><a href="#caes">Nossos cães</a></li>
+          <li><a href="#ninhadas">Ninhadas</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5585999054747" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/imperiumdelcane/" target="_blank" rel="noopener">Instagram</a></li>
+          <li>Cascavel — Fortaleza, CE</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Imperium Del Cane. Todos os direitos reservados.</span>
+      <span>Criação da raça Cane Corso Italiano · Registro CBKC/FCI</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="https://wa.me/5585999054747?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20disponibilidade%20dos%20filhotes." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#0d0c09"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5C10.2 9 9.7 7.6 9.5 7c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.6 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C3.7 14.9 3.3 13.5 3.3 12c0-4.8 3.9-8.7 8.7-8.7s8.7 3.9 8.7 8.7-3.9 8.7-8.7 8.7z"/></svg>
+</a>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  const waFloat = document.getElementById('waFloat');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 20);
+    waFloat.classList.toggle('show', y > window.innerHeight * 0.6);
+  });
+
+  // mobile nav
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal:not(.in)');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(other => {
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
